@@ -1,0 +1,190 @@
+/* Importar fuente Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+/* Variables de color */
+:root {
+    --bg-deep-blue: #020617; /* Azul casi negro (abismo) */
+    --bg-gradient: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e1b4b 100%);
+    --accent-blue: #3b82f6; /* Azul brillante */
+    --accent-purple: #8b5cf6; /* Púrpura suave */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px); /* Efecto cristal/agua */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 30px 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    /* Efecto de texto con gradiente */
+    background: linear-gradient(to right, #60a5fa, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, select {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    color: var(--text-main);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Estilo de las opciones del select para que no se vean blancas en navegadores basados en webkit */
+option {
+    background-color: var(--bg-deep-blue);
+    color: var(--text-main);
+}
+
+button {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
+.result {
+    background: rgba(139, 92, 246, 0.1);
+    border-left: 4px solid var(--accent-purple);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 20px;
+}
+
+.result h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.error {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #fca5a5;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+    margin: 40px 0;
+}
+
+/* =========================================
+   ESTILOS DE LA TABLA (Forzando el tema oscuro)
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-right: none !important;
+    border-left: none !important;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(30, 27, 75, 0.8) !important; /* Azul/Morado profundo */
+    color: #a78bfa;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Sobreescribimos tus estilos inline del HTML */
+tr[style*="background-color: #f2f2f2;"] {
+    background-color: rgba(30, 27, 75, 0.8) !important;
+}
+
+tr[style*="background-color: #e6ffe6;"] {
+    background-color: rgba(59, 130, 246, 0.15) !important; /* Resalte suave en azul para la precisión 1000 */
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}

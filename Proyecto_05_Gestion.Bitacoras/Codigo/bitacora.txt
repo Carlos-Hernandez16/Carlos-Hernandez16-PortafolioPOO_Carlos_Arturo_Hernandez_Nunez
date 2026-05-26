@@ -1,0 +1,12 @@
+Fecha: 2026-05-28
+Actividad: Reparaciones en la infraestructura
+Responsable: Angel Ivan
+-------------------------------
+Fecha: 2026-05-31
+Actividad: Compra de suministros para la empresa
+Responsable: Sofia Ruiz
+-------------------------------
+Fecha: 2026-06-29
+Actividad: Acomodar por categorias el inventario
+Responsable: Carlos Arturo
+-------------------------------
